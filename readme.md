@@ -16,7 +16,7 @@ Este proyecto muestra como:
 Para instalar las dependencias del servidor se debe ejecutar en el folder `servidor` el siguiente comando:
 ~~~console
 npm install
-~~~~
+~~~
 
 ### Ejecución del servidor
 Para iniciar el servidor, en el folder `servidor` se debe ejecutar el comando:
@@ -33,7 +33,7 @@ Para instalar las dependencias, en el folder `cliente` se debe ejecutar el coman
 
 ~~~console
 pip install -r requirements.txt
-~~~~
+~~~
 
 ### Ejecución del cliente
 
