@@ -1,19 +1,21 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 
 app.get("/", (req, res) => {
-  res.send("We're alive!!!");
+  res.send("API activa");
 });
 
-// API que retorna un archivo del servidor
-app.get("/api", function (req, res) {
+app.get("/api/analoga", function (req, res) {
+  const file = `${__dirname}/files/analoga.csv`;
+  res.download(file); // Retorna el archivo
+});
 
-  const file = `${__dirname}/files/documento.txt`;
-  console.log(`It will download ${file}`)
-  res.download(file); // Set disposition and send it.
+app.get("/api/digital", function (req, res) {
+  const file = `${__dirname}/files/digital.csv`;
+  res.download(file); // Retorna el archivo
 });
 
 app.listen(port, () =>
-  console.log(`Hello world app listening on port ${port}!`)
+  console.log(`Aplicación funcionando por el puerto ${port}!`)
 );
