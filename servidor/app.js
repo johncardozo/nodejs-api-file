@@ -7,12 +7,12 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/analoga", function (req, res) {
-  const file = `${__dirname}/files/analoga.csv`;
+  const file = `${__dirname}/files/analoga1.csv`;
   res.download(file); // Retorna el archivo
 });
 
 app.get("/api/digital", function (req, res) {
-  const file = `${__dirname}/files/digital.csv`;
+  const file = `${__dirname}/files/digital1.csv`;
   res.download(file); // Retorna el archivo
 });
 
